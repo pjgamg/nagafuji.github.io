@@ -28,10 +28,10 @@ for (let i = 0; i < num; i++) {
     div.addEventListener('click', () => {
         // div.classList.toggle('circle');
         if (i === winner) {
-            div.textContent = 'Hello!';
+            div.textContent = '正解!';
             div.classList.add('win')
         } else {
-            div.textContent = 'Not this.'
+            div.textContent = '残念'
             div.classList.add('lose')
         }
     });
