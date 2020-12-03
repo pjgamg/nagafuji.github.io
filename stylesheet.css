@@ -54,6 +54,18 @@ header {
     margin: 0 8px 0 0;
 }
 
+.name {
+  color: purple;
+}
+
+.fa-twitter {
+    color:#55acee;
+}
+
+.fa-youtube {
+    color: #ff0000;
+}
+
 .service {
     width: 500px;
     margin: 0 auto;
@@ -83,16 +95,4 @@ footer p {
     font-size: 14px;
     margin: 0 0 60px 0;
     color: gray;
-}
-
-.name {
-  color: purple;
-}
-
-.fa-twitter {
-    color:#55acee;
-}
-
-.fa-youtube {
-    color: #ff0000;
 }
