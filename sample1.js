@@ -17,13 +17,23 @@
 //     target3.classList.toggle('circle')
 // });
 
-for (let i = 0; i < 10; i++) {
+const num = 5;
+const winner = Math.floor(Math.random() * num);
+
+for (let i = 0; i < num; i++) {
     const div = document.createElement('div');
     div.classList.add('box');
     div.textContent = i + 1;
 
     div.addEventListener('click', () => {
-        div.classList.toggle('circle');
+        // div.classList.toggle('circle');
+        if (i === winner) {
+            div.textContent = 'Hello!';
+            div.classList.add('win')
+        } else {
+            div.textContent = 'Not this.'
+            div.classList.add('lose')
+        }
     });
 
     document.getElementById('sample1').appendChild(div);
