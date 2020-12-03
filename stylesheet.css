@@ -5,16 +5,88 @@ body {
 }
 
 header {
-    background-color: #efefef;
+    background-color: #d6d8ff;
+    padding: 32px 0;
 }
 
-h1 {
-    color: violet;
+.container {
+    /* background-color: pink; */
+    width: 500px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.icon {
+    /* background-color: skyblue; */
+}
+
+.icon img {
+    border-radius: 50%;
+    border-width: 4px;
+    border-style: solid;
+    border-color: white;
+}
+
+.info {
+    /* background-color: tomato; */
+    margin: 0 0 0 32px;
+}
+
+.info h1 {
+    font-weight: normal;
+    font-size: 24px;
     margin: 0;
 }
 
-.title {
-  color: #02ccba;
+.info p {
+    margin: 0 0 16px 0;
+    padding: 0;
+}
+
+.info ul {
+    margin: 0;
+    list-style: none;
+    display: flex;
+}
+
+.info ul li {
+    margin: 0 8px 0 0;
+}
+
+.service {
+    width: 500px;
+    margin: 0 auto;
+}
+
+.service > h1 {
+    font-weight: normal;
+    font-size: 24px;
+    text-align: center;
+    margin: 60px 0;
+}
+
+.service > section {
+    margin: 0 0 60px 0 ;
+}
+
+.service > section > h1 {
+    font-weight: normal;
+}
+
+.service p {
+    line-height: 1.8;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+    margin: 0 0 60px 0;
+    color: gray;
+}
+
+.name {
+  color: purple;
 }
 
 .fa-twitter {
