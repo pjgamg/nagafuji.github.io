@@ -9,8 +9,15 @@ header {
     padding: 32px 0;
 }
 
-.container {
+.container1 {
     /* background-color: pink; */
+    width: 650px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.container2 {
     width: 500px;
     margin: 0 auto;
     display: flex;
@@ -93,14 +100,22 @@ header {
 .practice {
     background-color: rgb(230, 230, 230);
     margin: 0 auto;
+}
+
+.practice_title {
     text-align: center;
 }
 
-.practice > h1 {
+.practice_title > h1 {
     margin: 0;
 }
 
-.practice > p {
+.practice_title > p {
+    margin: 0;
+}
+
+pre {
+    height: 70px;
     margin: 0;
 }
 
@@ -132,6 +147,14 @@ header {
 
 .lose {
     transform: scale(0.9);
+}
+
+hr {
+    margin: 0;
+}
+
+aside {
+    padding: 0 0 0 30px;
 }
 
 footer p {

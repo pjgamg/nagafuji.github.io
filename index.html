@@ -13,7 +13,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container1">
             <div class="icon">
                 <img src="img/nagafuji.jpg" width="120" height="120" alt="熊野の長藤の画像です。">
             </div>
@@ -27,34 +27,100 @@
                         </a>
                     </li>
                     <li>
-                        <a href="" target="_blank">
+                        <a href="" target="">
                             <i class="fab fa-youtube fa-2x"></i>
                         </a>
                     </li>
                 </ul>
             </div>
+
+            <nav>
+                <ul>
+                    <li><a href="#service">提供中のサービス</a></li>
+                    <li><a href="#practice">練習スペース</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
-    <section class="service">
-        <h1>現在提供中のサービス</h1>
-        <section>
-            <img src="img/shiyousyo.png" alt="標準仕様書　電子書籍（Web版）のサイト画像" width="200" height="250">
-            <h1>標準仕様書　電子書籍（Web版）月額５０円</h1>
-            <p>公共建築工事に使用される標準仕様書をWebページにして読みやすくしたものです。
-                <br>建築、電気設備、機械設備の各工事編が月額５０円で全て読み放題
-                <br>現場でスマホから素早く調べられます。
-            </p>
+    <main>
+        <section class="service" id="service">
+            <h1>現在提供中のサービス</h1>
+            <section>
+                <img src="img/shiyousyo.png" alt="標準仕様書　電子書籍（Web版）のサイト画像" width="200" height="250">
+                <h1>標準仕様書　電子書籍（Web版）月額５０円</h1>
+                <p>公共建築工事に使用される標準仕様書をWebページにして読みやすくしたものです。
+                    <br>建築、電気設備、機械設備の各工事編が月額５０円で全て読み放題
+                    <br>現場でスマホから素早く調べられます。
+                </p>
+            </section>
         </section>
-    </section>
+        <hr>
+        <section class="practice" id="practice">
+            <section class="practice_title">
+                <h1> 練習スペース</h1>
+                <p>&lt; Nagafujiのプログラミング学習のためのスペースです。&gt;</p>
+            </section>
+            <!-- 文字実体参照 -->
+            <div class="container2">
+                <pre>
+                <code>
+                    &lt;div class="sample1" id="sample1"&gt;
+                    &lt;script src="sample1.js"&gt;&lt;/script&gt;
+                    &lt;/div&gt;
+                </code>
+            </pre>
+            </div>
+            <!-- リストの表現 -->
+            <div class="container2">
+                <ul>
+                    <li>箇条</li>
+                    <li>書き</li>
+                    <li>リスト</li>
+                </ul>
+                <ol>
+                    <li>順序</li>
+                    <li>付き</li>
+                    <li>リスト</li>
+                </ol>
+                <dl>
+                    <dt>説明</dt>
+                    <dd>リスト</dd>
+                </dl>
+            </div>
+            <!-- テーブルの作成 -->
+            <div class="container2">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>年月</th>
+                            <th>作業</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2020.11</td>
+                            <td>作成</td>
+                        </tr>
+                    </tbody>
+                    <tbody>
+                        <tr>
+                            <td>2020.12</td>
+                            <td>更新</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- くじ引きゲーム -->
+            <div class="sample1" id="sample1">
+                <script src="sample1.js"></script>
+            </div>
+        </section>
+    </main>
     <hr>
-    <section class="practice">
-        <h1> 練習スペース</h1>
-        <p>&lt; Nagafujiのプログラミング学習のためのスペースです。&gt;</p>
-        <div class="sample1" id="sample1">
-            <script src="sample1.js"></script>
-        </div>
-    </section>
-    <hr>
+    <aside>
+        <p><a href="miscellaneous_notes.html">雑記帳</a></p>
+        <p><a href="#top">先頭へ戻る</a></p>
+    </aside>
     <footer>
         <p>(c) 2020 Nagafuji Yuya</p>
     </footer>
