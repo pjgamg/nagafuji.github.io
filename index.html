@@ -44,7 +44,7 @@
     </header>
     <main>
         <section class="service" id="service">
-            <h1>現在提供中のサービス</h1>
+            <h1><span style="color: red;">現</span>在提供中のサービス</h1>
             <section>
                 <img src="img/shiyousyo.png" alt="標準仕様書　電子書籍（Web版）のサイト画像" width="200" height="250">
                 <h1>標準仕様書　電子書籍（Web版）月額５０円</h1>
@@ -57,7 +57,7 @@
         <hr>
         <section class="practice" id="practice">
             <section class="practice_title">
-                <h1> 練習スペース</h1>
+                <h1><span style="color: blue;">練</span>習スペース</h1>
                 <p>&lt; Nagafujiのプログラミング学習のためのスペースです。&gt;</p>
             </section>
             <!-- 文字実体参照 -->
@@ -109,6 +109,25 @@
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <!-- フォーム部品 -->
+            <div class="container2 form">
+                <label for="form">フォーム</label>
+                <textarea name="" id="form">Hello there!</textarea>
+                <input type="text" placeholder="Hello!">
+                <input type="text" value="Hello!">
+                <label>Password <input type="password"></label>
+                <label for="color">好きな色
+                    <!-- <select name="" id="color" size="4" multiple> -->
+                    <select id="color">
+                        <option value="">赤</option>
+                        <option value="">青</option>
+                        <option value="">茶</option>
+                        <option value="">白</option>
+                        <option value="">灰</option>
+                        <option value="">黒</option>
+                    </select>
+                </label>
             </div>
             <!-- くじ引きゲーム -->
             <div class="sample1" id="sample1">
