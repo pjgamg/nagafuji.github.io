@@ -128,9 +128,52 @@
                         <option value="">黒</option>
                     </select>
                 </label>
+                <fieldset>
+                    <legend>チェックボックス</legend>
+                    <label for="">
+                        <input type="checkbox" name="" id="">A
+                    </label>
+                    <label for="">
+                        <input type="checkbox" checked name="" id="">B
+                    </label>
+                    <label for="">
+                        <input type="checkbox" name="" id="">C
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>ラジオボタン</legend>
+                    <label for="">
+                        <input type="radio" name="radio" id="">A
+                    </label>
+                    <label for="">
+                        <input type="radio" checked name="radio" id="">B
+                    </label>
+                    <label for="">
+                        <input type="radio" name="radio" id="">C
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <legend>HTML5対応ブラウザのみ表示</legend>
+                    <p><input type="color" name="" id=""></p>
+                    <p><input type="date" name="" id=""></p>
+                    <p><input type="number" name="" id=""></p>
+                    <p><input type="range" name="" id=""></p>
+                </fieldset>
+                <fieldset>
+                    <legend>ボタン</legend>
+                    <input type="button" value="OK">
+                    <button>OK</button>
+                    <input type="button" value="OK" disabled>
+                    <button disabled>OK</button>
+                </fieldset>
+                <form action="process.php" method="post">
+                    <label for="">担当者<input type="text" name="username"></label>
+                    <label for="">タスク<input type="text" name="task"></label>
+                    <button>追加</button>
+                </form>
             </div>
             <!-- くじ引きゲーム -->
-            <div class="sample1" id="sample1">
+            <div class=" sample1" id="sample1">
                 <script src="sample1.js"></script>
             </div>
         </section>
