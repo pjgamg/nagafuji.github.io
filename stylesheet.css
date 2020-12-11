@@ -18,6 +18,7 @@ header {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 .container2 {
@@ -26,10 +27,11 @@ header {
     display: flex;
     align-items: center;
     text-align: center;
+    justify-content: center;
 }
 
 .icon {
-    /* background-color: skyblue; */
+    background-color: none;
 }
 
 .icon img {
@@ -90,7 +92,7 @@ nav ul {
 }
 
 .service {
-    width: 700px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -104,9 +106,14 @@ nav ul {
 
 .service > section {
     margin: 0 0 60px 0 ;
+    display: flex;
 }
 
-.service > section > h1 {
+.service > section > div {
+    margin: auto 20px;
+}
+
+.service section h1 {
     font-weight: normal;
 }
 
@@ -120,11 +127,10 @@ nav ul {
     border-radius: 10%;
 }
 
-.shiyousyo {
-    padding: 5px 20px;
+.shiyousyo_title {
+    width: fit-content;
+    padding: 0 20px;
     text-decoration: none;
-    border: 2px solid rgb(80, 80, 80);
-    border-radius: 17.5px;
 }
 
 .practice {
@@ -179,6 +185,10 @@ pre {
     border: 1px solid yellow;
 }
 
+.box_practice {
+    margin: 10px 100px;
+}
+
 .box1 {
     background: coral;
     width: 200px;
@@ -192,12 +202,13 @@ pre {
     width: 50%;
     height: 50%;
     overflow-x: scroll;
-    border-left: 1px solid blue;
-    border-right: 1px solid blue;
+    border-left: 10px solid blue;
+    border-right: 10px solid blue;
     position: relative;
     top: 30px;
     left: 40px;
     z-index: 1;
+    box-sizing: border-box;
 }
 
 .box3 {
@@ -216,6 +227,94 @@ pre {
     position: fixed;
     top: 30px;
     right: 30px;
+}
+
+.box5 {
+    background-color: pink;
+    width: calc((100% - 40px) / 3);
+    height: 50px;
+    box-shadow: 10px 5px rgba(0, 0, 0, 0.3);
+    text-shadow: 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+.box6 {
+    background-color: pink;
+    width: calc((100% - 40px) / 3);
+    height: 50px;
+    margin: 0 auto;
+    box-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+    text-shadow: 10px 5px 3px rgba(0, 0, 0, 0.3);
+}
+
+.box7 {
+    background-color: pink;
+    width: calc((100% - 40px) / 3);
+    height: 50px;
+    margin-left: auto;
+    box-shadow: 10px 5px 3px 10px rgba(0, 0, 0, 0.3);
+    /* text-shadowの影の拡大は無効になる */
+    text-shadow: 10px 5px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.background_practice {
+    margin: 20px 0;
+    height: 80px;
+    background: center/cover palevioletred url(img/nagafuji.jpg);
+}
+
+.selector h1::before, h2::before {
+    content: "- ";
+}
+
+.selector h1::after, h2::after {
+    content: attr(data-subtitle);
+
+}
+
+.btn {
+    width: 100px;
+    background-color: skyblue;
+    text-align: center;
+    margin: 0 10px;
+    padding: 4px;
+    color: white;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.nth_child > :nth-child(odd) {
+    background-color: pink;
+}
+
+.nth_child > :nth-child(even) {
+    background-color: lightgreen;
+}
+
+.nth_child > :nth-child(3n) {
+    background-color: skyblue;
+}
+
+.nth_child > :first-child {
+    background-color: red;
+}
+
+.nth_child > :last-child {
+    background-color: blue;
+}
+
+.nth_of_type > h2:nth-of-type(3) {
+    background: limegreen;
+}
+
+.nth_of_type > h2:first-of-type {
+    background: palevioletred;
+}
+
+.not li:not(:empty) {
+    background: skyblue;
 }
 
 .sample1 {
@@ -250,7 +349,7 @@ pre {
 
 .miscellaneous_notes {
     margin: 0;
-    padding: 0 0 0 30px;
+    padding: 10px 30px;
     /* font-size: large;
     font-family: monospace; */
     font: large monospace;
