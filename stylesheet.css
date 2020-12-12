@@ -85,6 +85,33 @@ nav ul {
     list-style: circle;
 }
 
+.animation_icon {
+    width: 100px;
+    height: 100px;
+    background-color: indianred;
+    margin: 0 0 0 30px;
+    animation-name: move;
+    animation-duration: 2s;
+    /* animation-delay: 1s;
+    animation-fill-mode: forwards; */
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+    animation: move 2s 1s infinite alternate linear;
+}
+
+@keyframes move {
+    0% {
+        transform: none;
+    }
+    80% {
+        transform: translateX(200px) rotate(360deg);
+    }
+    100% {
+        transform: translateX(300px) rotate(360deg);
+    }
+}
+
 main {
     padding: 40px 0;
 }
@@ -94,12 +121,36 @@ main {
     margin: 0 auto;
 }
 
-.service>h1 {
+.service_title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service>div>h1 {
     /* font-weight: normal;
     font-size: 24px; */
     font: 24px normal;
     text-align: center;
     margin: 60px 0;
+}
+
+.loading {
+    width: 12px;
+    height: 12px;
+    border: 5px solid #ccc;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin .8s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: none;
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .service>section {
@@ -143,8 +194,7 @@ main {
     font-family: monospace; */
     border: 1px solid black;
     transition-property: border-radius, background;
-    transition: .3s;
-    transition-timing-function: cubic-bezier(0.18, 0.89, 0.38, 1.68);
+    transition: .3s cubic-bezier(0.18, 0.89, 0.38, 1.68) .5s;
 }
 
 .miscellaneous_notes:hover {
@@ -177,6 +227,36 @@ aside {
 
 a {
     text-decoration: none;
+}
+
+.message {
+    width: 300px;
+    padding: 8px 16px;
+    background-color: #b84ac7;
+    color: rgb(255, 255, 255);
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    right: 30px;
+    bottom: 40px;
+    animation: popup 2s forwards;
+}
+
+@keyframes popup {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+        animation-timing-function: ease-out;
+    }
+    20%, 80% {
+        transform: none;
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(20px);
+        opacity: 0;
+        pointer-events: none;
+    }
 }
 
 footer p {
