@@ -144,7 +144,7 @@ main {
     border: 1px solid black;
     transition-property: border-radius, background;
     transition: .3s;
-    transition-timing-function: ease-out;
+    transition-timing-function: cubic-bezier(0.18, 0.89, 0.38, 1.68);
 }
 
 .miscellaneous_notes:hover {
