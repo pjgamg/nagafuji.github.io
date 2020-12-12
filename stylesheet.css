@@ -68,6 +68,10 @@ header {
     vertical-align: middle;
 }
 
+.fa-twitter:hover {
+    opacity: 0.7;
+}
+
 .fa-youtube {
     color: #ff0000;
     text-decoration: line-through black double;
@@ -121,22 +125,78 @@ main {
     border-radius: 10%;
 }
 
+.service section img:hover {
+    opacity: 0.7;
+}
+
 .shiyousyo_title {
     width: fit-content;
     padding: 0 20px;
     text-decoration: none;
 }
 
+.miscellaneous_notes {
+    width: fit-content;
+    margin: 30px 0;
+    padding: 10px 30px;
+    /* font-size: large;
+    font-family: monospace; */
+    border: 1px solid black;
+    transition-property: border-radius, background;
+    transition: .3s;
+    transition-timing-function: ease-out;
+}
+
+.miscellaneous_notes:hover {
+    background-color: #eee;
+    border-radius: 50%;
+    transform: translate(10px) scale(1.4);
+}
+
+.wf-roundedmplus1c {
+    font: larger;
+    font-family: "M PLUS Rounded 1c";
+}
+
+hr {
+    margin: 0;
+    color: gray;
+}
+
+aside {
+    background-color: #d6d8ff;
+    padding: 0 0 0 30px;
+}
+
+.top {
+    width: fit-content;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+footer p {
+    text-align: center;
+    font-size: 14px;
+    margin: 60px 0 60px 0;
+    color: gray;
+}
+
 .practice_container {
     width: 500px;
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    text-align: center;
     justify-content: center;
 }
 
 .practice {
+    margin: 30px 0 0 0;
     padding: 30px 0;
     background-color: rgb(230, 230, 230);
 }
@@ -348,38 +408,4 @@ pre {
 
 .lose {
     transform: scale(0.9);
-}
-
-.miscellaneous_notes {
-    margin: 30px 0;
-    padding: 10px 30px;
-    /* font-size: large;
-    font-family: monospace; */
-    width: fit-content;
-    border: 1px solid black;
-}
-
-.wf-roundedmplus1c {
-    padding: 0 0 30px 0;
-    font: larger;
-    font-family: "M PLUS Rounded 1c";
-}
-
-hr {
-    margin: 0;
-}
-
-aside {
-    padding: 0 0 0 30px;
-}
-
-a {
-    text-decoration: none;
-}
-
-footer p {
-    text-align: center;
-    font-size: 14px;
-    margin: 60px 0 60px 0;
-    color: gray;
 }
