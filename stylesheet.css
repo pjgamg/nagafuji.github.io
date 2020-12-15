@@ -101,7 +101,7 @@ nav ul {
 .service_title {
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
 }
 
 .service>div>h1 {
