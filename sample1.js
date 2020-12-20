@@ -1,8 +1,5 @@
 'use strict';
 {
-
-
-
     // const target1 = document.getElementById('target1');
     // const target2 = document.getElementById('target2');
     // const target3 = document.getElementById('target3');
@@ -42,7 +39,4 @@
         document.getElementById('sample1').appendChild(div);
 
     }
-
-
-
 }
