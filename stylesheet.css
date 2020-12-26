@@ -631,6 +631,23 @@ pre {
     transform: scale(0.9);
 }
 
+.my-color {
+    color: red;
+    background-color: skyblue;
+}
+
+.my-border {
+    border-bottom: 4px solid orange;
+}
+
+#ul9 li {
+    cursor: pointer;
+}
+
+#ul9 li.done {
+    text-decoration: line-through;
+}
+
 @media (min-width: 600px) {
     .info {
         display: block;

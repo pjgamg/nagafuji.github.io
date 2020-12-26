@@ -322,4 +322,121 @@
 
     console.log(Math.random());
 
+    let max = 6;
+    let min = 1;
+    console.log(Math.floor(Math.random() * (max + 1 - min)) + min);
+}
+{
+    const d = new Date();
+    console.log(d);
+    console.log(d.getFullYear());
+    console.log(`${d.getMonth() + 1}月 ${d.getDate()}日`);
+    console.log(d.getDay());//０は日〜６は土　曜日
+    console.log(`${d.getHours()}時 ${d.getMinutes()}分 ${d.getSeconds()}秒 ${d.getMilliseconds()}ミリ秒`);
+    console.log(d.getTime());//UTC 1970/01/01 00:00:00 からの経過ミリ秒 
+}
+{
+    const d = new Date(2020, 11);
+    d.setHours(10, 20, 30);
+    d.setDate(d.getDate() + 3);
+    console.log(d);
+}
+{
+    alert('こんにちは！ページを開くにはOKを押して下さい。');
+    const answer = confirm('確認を求める表示のプログラムです。OKの値を返しますか？キャンセルの値を返す場合はキャンセルを押して下さい。');
+    if (answer) {
+        console.log('OKの値を返しました。');
+    } else {
+        console.log('キャンセルの値を返しました。');
+    }
+}
+{
+    let i = 0;
+    function showTime() {
+        console.log(new Date());
+        i++;
+        if (i > 2) {
+            clearInterval(intervalId);
+        }
+    }
+    const intervalId = setInterval(showTime, 1000);
+}
+{
+    let i = 0;
+    function showTime() {
+        console.log(new Date());
+        const timeoutId = setTimeout(showTime, 1000);
+        i++;
+        if (i > 2) {
+            clearTimeout(timeoutId);
+        }
+    }
+    showTime();
+}
+{
+    // const name = 'nagafuji';
+    const name = 5;
+    try {
+        console.log(name.toUpperCase());
+    }
+    catch (e) {
+        console.log(e);
+    }
+    console.log('Done!');
+}
+{
+    class Post { //親クラス
+        constructor(text) {
+            this.text = text;
+            this.likeCount = 0;
+        }
+
+        show() {
+            console.log(`${this.text} - ${this.likeCount}likes`);
+        }
+
+        like() {
+            this.likeCount++;
+            this.show();
+        }
+
+        //静的メソッド
+        //thisは使えない
+        static showInfo() {
+            console.log('Post class version 1.0');
+        }
+    }
+    class SponsoredPost extends Post { //子クラス
+        constructor(text, sponsor) {
+            super(text);
+            this.sponsor = sponsor;
+        }
+
+        show() {
+            super.show();
+            console.log(`... sponsored by ${this.sponsor}`);
+        }
+
+        //静的メソッド
+        //thisは使えない
+        static showInfo() {
+            console.log('Post class version 1.0');
+        }
+    }
+    const posts = [
+        new Post('JavaScriptの勉強中･･･'),
+        new Post('プログラミング楽しい！'),
+        new SponsoredPost('スマホで読める標準仕様書', '標準仕様書Web版'),
+    ];
+
+    posts[0].like();
+
+    // show(posts[0]);
+    posts[0].show();
+    posts[1].show();
+
+    Post.showInfo();
+
+    posts[2].show();
+    posts[2].like();
 }
