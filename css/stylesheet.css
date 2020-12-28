@@ -648,6 +648,37 @@ pre {
     text-decoration: line-through;
 }
 
+/* vue practice */
+
+.todo_app {
+    width: 300px;
+    margin: auto;
+}
+
+.todo_app ul {
+    padding: 0;
+    list-style: none;
+}
+
+.todo_app li {
+    line-height: 1.5;
+}
+
+.todo_app li>span.done {
+    text-decoration: line-through;
+    color: #bbb;
+}
+
+.todo_app input[type="text"] {
+    padding: 2px;
+}
+
+.command {
+    font-size: 12px;
+    cursor: pointer;
+    color: #08c;
+}
+
 @media (min-width: 600px) {
     .info {
         display: block;
