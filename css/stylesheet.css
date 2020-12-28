@@ -655,6 +655,15 @@ pre {
     margin: auto;
 }
 
+.todo_app h1>button {
+    float: right;
+}
+
+.todo_app .tasks {
+    color: #bbb;
+    font: 12px normal;
+}
+
 .todo_app ul {
     padding: 0;
     list-style: none;
