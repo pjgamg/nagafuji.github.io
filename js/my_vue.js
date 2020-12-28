@@ -6,17 +6,33 @@
         data: {
             // name: 'nagafuji'
             newItem: "",
-            todos: [{
-                title: 'task 1',
-                isDone: false
-            }, {
-                title: 'task 2',
-                isDone: false
-            }, {
-                title: 'task 3',
-                isDone: true
-            }]
-            // todos: []
+            // todos: [{
+            //     title: 'task 1',
+            //     isDone: false
+            // }, {
+            //     title: 'task 2',
+            //     isDone: false
+            // }, {
+            //     title: 'task 3',
+            //     isDone: true
+            // }]
+            todos: []
+        },
+        watch: {
+            // todos: function () {
+            //     localStorage.setItem('todos', JSON.stringify(this.todos));
+            //     alert('Data saved!');
+            // }
+            todos: {
+                handler: function () {
+                    localStorage.setItem('todos', JSON.stringify(this.todos));
+                    // alert('Data saved!');
+                },
+                deep: true
+            }
+        },
+        mounted: function () {
+            this.todos = JSON.parse(localStorage.getItem('todos')) || [];
         },
         // methods: {
         //     addItem: function (e) {
@@ -56,6 +72,47 @@
                 return this.todos.filter(function (todo) {
                     return !todo.isDone;
                 });
+            }
+        }
+    });
+
+    var likeComponent = Vue.extend({
+        // props: ['message'],
+        props: {
+            message: {
+                type: String,
+                default: 'Like'
+            }
+        },
+        // data: function () {
+        data() {
+            return {
+                count: 0
+            }
+        },
+        template: '<button @click="countUp">{{ message }} {{ count }}</button>',
+        methods: {
+            // countUp: function () {
+            countUp() {
+                this.count++;
+                this.$emit('increment');
+            }
+        }
+        // template: '<div><button>Like</button><button>Like</button></div>'
+    });
+
+    var likeButton = new Vue({
+        el: '#likeButton',
+        components: {
+            'like-component': likeComponent
+        },
+        data: {
+            total: 0
+        },
+        methods: {
+            // incrementTotal: function () {
+            incrementTotal() {
+                this.total++;
             }
         }
     });
