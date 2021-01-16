@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <title>Nagafujiの雑記帳</title>
+    <link rel="stylesheet" href="css/stylesheet.css">
+    <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
+    <style>
+        .myStyle {
+            border: 5px solid green;
+            font-size: 48px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="index.html">ホームへ戻る</a>
+    <p>jQueryの練習</p>
+    <a href="http://google.com" data-sitename="google">google</a>
+    <input type="text" value="hello">
+    <ul id="main">
+        <li>0</li>
+        <li class="item">1</li>
+        <li class="item">2</li>
+        <li>3
+            <ul id="sub">
+                <li>3-0</li>
+                <li>3-1</li>
+                <li class="item">3-2</li>
+                <li class="item">3-3</li>
+                <li>3-4</li>
+            </ul>
+        </li>
+    </ul>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script>
+        $(function () {
+            // セレクタ.メソッド
+            // $("")
+            // html要素 p h1 ul
+            // id #main
+            // class .item
+            // > 直下の子要素
+            // 空白 それ以下の要素
+            // , 複数の要素
+            // + 隣接する要素
+            // フィルタ
+            // :eq()
+            // :gt(), :lt()
+            // :even, :odd
+            // :contains()
+            // :first, :last
+            // DOM要素指定メソッド
+            // parent(), children()
+            // next(), prev()
+            // siblings()
+            // 属性セレクタ
+            //= 等しい
+            //!= 等しくない
+            //*= 含む
+            //^= 先頭が等しい
+            //$= 終わりが等しい
+            // .css 設定 取得
+            // addClass removeClass
+            // attr
+            //data
+            //text
+            //html
+            //val
+            //remove, empty
+            // before, after -> insertBefore, insertAfter
+            // prepend, append -> prependTo, appendTo
+
+            var li = $('<li>').text('just added');
+            $('ul > li:eq(1)').before(li);
+            // li.insertAfter($('ul > li:eq(1)'));
+            $('ul').append(li);
+        });
+    </script>
+</body>
+
+</html>
