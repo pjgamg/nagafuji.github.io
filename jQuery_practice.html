@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <title>Nagafujiの雑記帳</title>
-    <link rel="stylesheet" href="css/stylesheet.css">
     <link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet">
     <style>
         .myStyle {
@@ -35,6 +34,14 @@
             </ul>
         </li>
     </ul>
+    <div id="box" style="width: 100px;height: 100px;background: red;"></div>
+    <input type="text" id="name">
+    <select name="members" id="members">
+        <option value="">nagafuji</option>
+        <option value="">yuya</option>
+        <option value="">fujinohana</option>
+    </select>
+    <button>Add!</button>
 
     <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script>
@@ -74,11 +81,47 @@
             //remove, empty
             // before, after -> insertBefore, insertAfter
             // prepend, append -> prependTo, appendTo
+            //hide, show
+            //fadeOut, fadeIn
+            //toggle
+            //click
+            //mouseover, mouseout, mousemove
+            //focus, blur
+            //change
+            //on
 
             var li = $('<li>').text('just added');
             $('ul > li:eq(1)').before(li);
             // li.insertAfter($('ul > li:eq(1)'));
             $('ul').append(li);
+            $('#box')
+                .mouseover(function () {
+                    $(this).css('background', 'green');
+                })
+                .mouseout(function () {
+                    $(this).css('background', 'red');
+                })
+                .mousemove(function (e) {
+                    $(this).text(e.pageX);
+                });
+            $('#name')
+                .focus(function () {
+                    $(this).css('background', 'red');
+                })
+                .blur(function () {
+                    $(this).css('background', 'green');
+                });
+            $('#members').change(function () {
+                alert('changed!');
+            });
+            $('button').click(function () {
+                var p = $('<p>').text('vanish!').addClass('vanish');
+                $(this).before(p);
+            });
+            $('body').on('click', '.vanish', function () {
+                $(this).remove();
+            });
+
         });
     </script>
 </body>

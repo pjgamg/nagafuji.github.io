@@ -71,7 +71,7 @@
 }
 {
     document.querySelector('#button4').addEventListener('click', () => {
-        const colors = document.querySelectorAll('input');
+        const colors = document.querySelectorAll('.input4');
         let selectedColor;
 
         colors.forEach(color => {
@@ -80,15 +80,15 @@
             }
         });
 
-        const li = document.createElement('li');
-        li.textContent = selectedColor;
-        document.querySelector('#ul4').appendChild(li);
+        const li4 = document.createElement('li');
+        li4.textContent = selectedColor;
+        document.querySelector('#ul4').appendChild(li4);
 
     });
 }
 {
     document.querySelector('#button5').addEventListener('click', () => {
-        const colors = document.querySelectorAll('input');
+        const colors = document.querySelectorAll('.input5');
         const selectedColors = [];
 
         colors.forEach(color => {
@@ -97,10 +97,10 @@
             }
         });
 
-        const li = document.createElement('li');
+        const li5 = document.createElement('li');
         // li.textContent = selectedColors.join(',');
-        li.textContent = selectedColors;
-        document.querySelector('#ul5').appendChild(li);
+        li5.textContent = selectedColors;
+        document.querySelector('#ul5').appendChild(li5);
 
     });
 }
